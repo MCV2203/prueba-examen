@@ -6,6 +6,7 @@ const boton = document.querySelector("button")
 
 function miDiv (){
     console.log("Buenos dias" + " " + nombre.value + " " + apellido.value)
+    alert ("Buenos dias" + " " + nombre.value + " " + apellido.value)
 }
 
 boton.addEventListener ("click", miDiv)
@@ -43,3 +44,20 @@ const nota1 = document.querySelector ("#nota1")
 const nota2 = document.querySelector ("#nota2")
 const nota3 = document.querySelector ("#nota3")
 const evaluar = document.querySelector ("#evaluar")
+const notaDiv = document.querySelector ("#nota")
+
+evaluar.addEventListener("click", calcular)
+
+function calcular(){
+
+    let n1 = Number(nota1.value) 
+    let n2 = Number(nota2.value)
+    let n3 = Number(nota3.value)
+
+    if (n1 < 5 || n2 < 5 || n3 < 5){
+        notaDiv.innerHTML = "4 - Hay que aprobar los 3 trimestres"
+    } else {
+        let media = (n1 + n2 + n3) / 3
+        notaDiv.innerHTML = media
+    }
+}
