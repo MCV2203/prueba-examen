@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <div id="contador">0</div>
+    <button id="btn">Sumar 1</button>
+
+    <script>
+        const numero = document.querySelector("#contador");
+        const boton = document.querySelector("#btn");
+        let cuenta = 0;
+
+        function sumar() {
+            cuenta = cuenta + 1;
+            numero.innerHTML = cuenta;
+        }
+
+        boton.addEventListener("click", sumar);
+    </script>
+</body>
+</html>
